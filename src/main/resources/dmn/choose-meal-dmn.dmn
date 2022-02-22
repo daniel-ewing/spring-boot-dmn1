@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" id="choose-meal-dmn" name="Choose Meal DMN" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.8.1">
+  <decision id="choose-meal" name="Choose Meal">
+    <informationRequirement id="InformationRequirement_0dz1ikv">
+      <requiredInput href="#InputData_1jtd3tc" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_064by00">
+      <requiredInput href="#InputData_0yt6ebd" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_0i1xb2n">
+      <requiredInput href="#InputData_1tjxauo" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_11ea16q">
+      <input id="Input_1" label="Time Of Day" biodi:width="192">
+        <inputExpression id="InputExpression_1" typeRef="integer">
+          <text>timeOfDay</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_19ejjdb" label="Age Of Guest">
+        <inputExpression id="LiteralExpression_1jzug2t" typeRef="integer">
+          <text>ageOfGuest</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1l81p2s" label="Hunger">
+        <inputExpression id="LiteralExpression_0wdt4z1" typeRef="integer">
+          <text>hunger</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Food" name="food" typeRef="string">
+        <outputValues id="UnaryTests_1q5hxpn">
+          <text>"Cereal","Eggs","Sandwich","Pizza &amp; Salad","Mac &amp; Cheese","Steak"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_0rqb0l1" label="Beverage" name="beverage" typeRef="string">
+        <outputValues id="UnaryTests_16cr0bf">
+          <text>"Beer","Coffee","Juice","Soda","Water"</text>
+        </outputValues>
+      </output>
+      <output id="OutputClause_16zojkj" label="Salad" name="salad" typeRef="boolean" />
+      <rule id="DecisionRule_0hvkceh">
+        <inputEntry id="UnaryTests_0b8f7tb">
+          <text>[0..3]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1w2i36i">
+          <text>&lt;21</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1io1krf">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1a5z8rg">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0w6ap5c">
+          <text>"Water"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18ww491">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_08hgif4">
+        <inputEntry id="UnaryTests_016uld3">
+          <text>[0..3]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0app1vp">
+          <text>&gt;=21</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_185xa2b">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0o0ecij">
+          <text></text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1gnuhti">
+          <text>"Beer"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1tcrttt">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0na9jry">
+        <inputEntry id="UnaryTests_0gqphmy">
+          <text>[4..11]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gkqd15">
+          <text>&lt;21</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zw8t06">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_00gqidr">
+          <text>"Cereal"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0ocm38z">
+          <text>"Juice"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0padty4">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0cqh5lk">
+        <inputEntry id="UnaryTests_1oupa38">
+          <text>[4..11]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0r6i6t7">
+          <text>&gt;=21</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0wfbmf8">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0i31y0x">
+          <text>"Eggs"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0xttbw8">
+          <text>"Coffee"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0uthuw0">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_18nfz3w">
+        <inputEntry id="UnaryTests_1s4lk2r">
+          <text>[12..17]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0uufdle">
+          <text>&lt;21</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0yxp1zp">
+          <text>&lt;=5</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0k1rq69">
+          <text>"Sandwich"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0tj8x8r">
+          <text>"Soda"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1b9w78s">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1nhve2u">
+        <inputEntry id="UnaryTests_01fxpgn">
+          <text>[12..17]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0quo826">
+          <text>&lt;21</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gm7g0z">
+          <text>&gt;5</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0fp2qbd">
+          <text>"Sandwich"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1396hg6">
+          <text>"Soda"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1rti4l7">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1iicdaa">
+        <inputEntry id="UnaryTests_0829wyf">
+          <text>[12..17]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0zjbghv">
+          <text>&gt;=21</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10tdqlf">
+          <text>&lt;=5</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0lt3xst">
+          <text>"Pizza &amp; Salad"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0jqowb3">
+          <text>"Soda"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0b2ubzj">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0s9bm4q">
+        <inputEntry id="UnaryTests_0btxmb1">
+          <text>[12..17]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08e3lpx">
+          <text>&gt;=21</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0y2svf8">
+          <text>&gt;5</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0cgvtdt">
+          <text>"Pizza &amp; Salad"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1yqrijg">
+          <text>"Soda"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1kfg79g">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0sgl28r">
+        <inputEntry id="UnaryTests_17hf33m">
+          <text>[18..23]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1h96brz">
+          <text>&lt;21</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ysppvx">
+          <text>&lt;=5</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_01hdbht">
+          <text>"Mac &amp; Cheese"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0rqf6nq">
+          <text>"Soda"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_17lwih2">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1qsozck">
+        <inputEntry id="UnaryTests_0g3gzjx">
+          <text>[18..23]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0mxnxop">
+          <text>&lt;21</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_027jqx2">
+          <text>&gt;5</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_02lfjb2">
+          <text>"Mac &amp; Cheese"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_18eftbu">
+          <text>"Soda"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_1m6a3yz">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1dnwukl">
+        <inputEntry id="UnaryTests_0guqj9a">
+          <text>[18..23]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1mk9sec">
+          <text>&gt;=21</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_00plw9f">
+          <text>&lt;=5</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0j85ozp">
+          <text>"Steak"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0zdafh8">
+          <text>"Beer"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0vdry47">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0nb95jm">
+        <inputEntry id="UnaryTests_0iz4a00">
+          <text>[18..23]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1f69e3m">
+          <text>&gt;=21</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jjdp5w">
+          <text>&gt;5</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_12pj8un">
+          <text>"Steak"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mqsr93">
+          <text>"Beer"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0mlg97o">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_1jtd3tc" name="Time Of Day" />
+  <inputData id="InputData_0yt6ebd" name="Age Of Guest" />
+  <inputData id="InputData_1tjxauo" name="Hunger" />
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="choose-meal">
+        <dc:Bounds height="80" width="180" x="280" y="100" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1x4coar" dmnElementRef="InputData_1jtd3tc">
+        <dc:Bounds height="45" width="125" x="157" y="257" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0v0gwwm" dmnElementRef="InformationRequirement_0dz1ikv">
+        <di:waypoint x="220" y="257" />
+        <di:waypoint x="325" y="200" />
+        <di:waypoint x="325" y="180" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_1osnkrx" dmnElementRef="InputData_0yt6ebd">
+        <dc:Bounds height="45" width="125" x="307" y="257" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0ct8ag6" dmnElementRef="InformationRequirement_064by00">
+        <di:waypoint x="370" y="257" />
+        <di:waypoint x="370" y="200" />
+        <di:waypoint x="370" y="180" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_074xshz" dmnElementRef="InputData_1tjxauo">
+        <dc:Bounds height="45" width="125" x="457" y="257" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1fqf03t" dmnElementRef="InformationRequirement_0i1xb2n">
+        <di:waypoint x="520" y="257" />
+        <di:waypoint x="415" y="200" />
+        <di:waypoint x="415" y="180" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
