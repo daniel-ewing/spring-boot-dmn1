@@ -13,7 +13,8 @@ import org.springframework.context.event.EventListener;
 @EnableProcessApplication
 @Slf4j
 public class ProcessApplication {
-	private final static String processKey = "choose-meal-bpm";
+	private final static String processKey1 = "choose-meal-bpm";
+	private final static String processKey2 = "use-myfunction-bpm";
 
 	@Autowired
 	private RuntimeService runtimeService;
@@ -22,8 +23,9 @@ public class ProcessApplication {
 	private void processPostDeploy(PostDeployEvent event) {
 		if (log.isDebugEnabled()) log.debug("-----> processPostDeploy: Enter");
 
-		for (int pi = 1; pi <= 10; pi++) {
-			runtimeService.startProcessInstanceByKey(processKey, processKey + " bk " + pi);
+		for (int pi = 1; pi <= 1; pi++) {
+			runtimeService.startProcessInstanceByKey(processKey1, processKey1 + " bk " + pi);
+			runtimeService.startProcessInstanceByKey(processKey2, processKey2 + " bk " + pi);
 			if ((pi % 1000) == 0) {
 				if (log.isDebugEnabled()) log.debug("-----> processPostDeploy created: {} process instances", pi);
 			}
