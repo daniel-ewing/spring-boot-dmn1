@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_0b4f8tx" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.12.1">
+  <bpmn:process id="rce-bpm" name="RCE BPM" isExecutable="true">
+    <bpmn:startEvent id="Event_Start" name="Start" camunda:asyncBefore="true">
+      <bpmn:extensionElements>
+        <camunda:formData>
+          <camunda:formField id="timeOfDay" label="Time Of Day" type="long" />
+          <camunda:formField id="ageOfGuest" label="Age Of Guest" type="string" />
+        </camunda:formData>
+      </bpmn:extensionElements>
+      <bpmn:outgoing>Flow_07ponm3</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="Flow_07ponm3" sourceRef="Event_Start" targetRef="Activity_SetVariables" />
+    <bpmn:endEvent id="Event_Stop" name="Stop">
+      <bpmn:incoming>Flow_15bwm6b</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_15bwm6b" sourceRef="rce" targetRef="Event_Stop" />
+    <bpmn:sequenceFlow id="Flow_0frvvtm" sourceRef="Activity_SetVariables" targetRef="rce" />
+    <bpmn:serviceTask id="Activity_SetVariables" name="Set Variables" camunda:delegateExpression="${setVariables}">
+      <bpmn:incoming>Flow_07ponm3</bpmn:incoming>
+      <bpmn:outgoing>Flow_0frvvtm</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:businessRuleTask id="rce" name="RCE" camunda:resultVariable="rceResult" camunda:decisionRef="rce" camunda:mapDecisionResult="singleResult">
+      <bpmn:incoming>Flow_0frvvtm</bpmn:incoming>
+      <bpmn:outgoing>Flow_15bwm6b</bpmn:outgoing>
+    </bpmn:businessRuleTask>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="rce-bpm">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="Event_Start">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="185" y="142" width="25" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1ipy0m9_di" bpmnElement="Event_Stop">
+        <dc:Bounds x="572" y="99" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="578" y="142" width="24" height="14" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0tijleo_di" bpmnElement="Activity_SetVariables">
+        <dc:Bounds x="260" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0cadkkv_di" bpmnElement="rce">
+        <dc:Bounds x="420" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_07ponm3_di" bpmnElement="Flow_07ponm3">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="260" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_15bwm6b_di" bpmnElement="Flow_15bwm6b">
+        <di:waypoint x="520" y="117" />
+        <di:waypoint x="572" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0frvvtm_di" bpmnElement="Flow_0frvvtm">
+        <di:waypoint x="360" y="117" />
+        <di:waypoint x="420" y="117" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
