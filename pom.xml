@@ -7,92 +7,108 @@
 
   <properties>
 
-<!--    <camunda.version>7.10.0-ee</camunda.version>-->
-<!--    <camunda.starter.version>3.1.9</camunda.starter.version>-->
-<!--    <spring.version>2.0.9.RELEASE</spring.version>-->
+    <!--    <camunda.version>7.10.0-ee</camunda.version>-->
+    <!--    <camunda.starter.version>3.1.9</camunda.starter.version>-->
+    <!--    <spring.version>2.0.9.RELEASE</spring.version>-->
 
-<!--    <camunda.version>7.10.0-ee</camunda.version>-->
-<!--    <camunda.starter.version>3.2.11</camunda.starter.version>-->
-<!--    <spring.version>2.1.18.RELEASE</spring.version>-->
+    <!--    <camunda.version>7.10.0-ee</camunda.version>-->
+    <!--    <camunda.starter.version>3.2.11</camunda.starter.version>-->
+    <!--    <spring.version>2.1.18.RELEASE</spring.version>-->
 
-<!--    <camunda.version>7.11.0-ee</camunda.version>-->
-<!--    <camunda.starter.version>3.3.10</camunda.starter.version>-->
-<!--    <spring.version>2.1.18.RELEASE</spring.version>-->
+    <!--    <camunda.version>7.11.0-ee</camunda.version>-->
+    <!--    <camunda.starter.version>3.3.10</camunda.starter.version>-->
+    <!--    <spring.version>2.1.18.RELEASE</spring.version>-->
 
-<!--    <camunda.version>7.11.20-ee</camunda.version>-->
-<!--    <camunda.starter.version>3.3.10</camunda.starter.version>-->
-<!--    <spring.version>2.1.18.RELEASE</spring.version>-->
+    <!--    <camunda.version>7.11.20-ee</camunda.version>-->
+    <!--    <camunda.starter.version>3.3.10</camunda.starter.version>-->
+    <!--    <spring.version>2.1.18.RELEASE</spring.version>-->
 
-<!--    <camunda.version>7.12.0-ee</camunda.version>-->
-<!--    <camunda.starter.version>3.4.4</camunda.starter.version>-->
-<!--    <spring.version>2.2.13.RELEASE</spring.version>-->
+    <!--    <camunda.version>7.12.0-ee</camunda.version>-->
+    <!--    <camunda.starter.version>3.4.4</camunda.starter.version>-->
+    <!--    <spring.version>2.2.13.RELEASE</spring.version>-->
 
-<!--    <camunda.version>7.12.4-ee</camunda.version>-->
-<!--    <camunda.starter.version>3.4.4</camunda.starter.version>-->
-<!--    <spring.version>2.2.13.RELEASE</spring.version>-->
+    <!--    <camunda.version>7.12.4-ee</camunda.version>-->
+    <!--    <camunda.starter.version>3.4.4</camunda.starter.version>-->
+    <!--    <spring.version>2.2.13.RELEASE</spring.version>-->
 
-<!--    <camunda.version>7.13.0-ee</camunda.version>-->
-<!--    <camunda.starter.version>7.13.0-ee</camunda.starter.version>-->
-<!--    <spring.version>2.2.13.RELEASE</spring.version>-->
+    <!--    <camunda.version>7.13.0-ee</camunda.version>-->
+    <!--    <camunda.starter.version>7.13.0-ee</camunda.starter.version>-->
+    <!--    <spring.version>2.2.13.RELEASE</spring.version>-->
 
-<!--    <camunda.version>7.13.2-ee</camunda.version>-->
-<!--    <camunda.starter.version>7.13.2-ee</camunda.starter.version>-->
-<!--    <spring.version>2.2.13.RELEASE</spring.version>-->
+    <!--    <camunda.version>7.13.2-ee</camunda.version>-->
+    <!--    <camunda.starter.version>7.13.2-ee</camunda.starter.version>-->
+    <!--    <spring.version>2.2.13.RELEASE</spring.version>-->
 
-<!--    <camunda.version>7.13.3-ee</camunda.version>-->
-<!--    <camunda.starter.version>7.13.3-ee</camunda.starter.version>-->
-<!--    <spring.version>2.3.12.RELEASE</spring.version>-->
+    <!--    <camunda.version>7.13.3-ee</camunda.version>-->
+    <!--    <camunda.starter.version>7.13.3-ee</camunda.starter.version>-->
+    <!--    <spring.version>2.3.12.RELEASE</spring.version>-->
 
-<!--    <camunda.version>7.14.1-ee</camunda.version>-->
-<!--    <camunda.starter.version>7.14.1-ee</camunda.starter.version>-->
-<!--    <spring.version>2.3.12.RELEASE</spring.version>-->
+    <!--    <camunda.version>7.14.1-ee</camunda.version>-->
+    <!--    <camunda.starter.version>7.14.1-ee</camunda.starter.version>-->
+    <!--    <spring.version>2.3.12.RELEASE</spring.version>-->
 
-<!--    <camunda.version>7.14.2-ee</camunda.version>-->
-<!--    <camunda.starter.version>7.14.2-ee</camunda.starter.version>-->
-<!--    <spring.version>2.4.11</spring.version>-->
+    <!--    <camunda.version>7.14.2-ee</camunda.version>-->
+    <!--    <camunda.starter.version>7.14.2-ee</camunda.starter.version>-->
+    <!--    <spring.version>2.4.11</spring.version>-->
 
-<!--    <camunda.version>7.14.5-ee</camunda.version>-->
-<!--    <camunda.starter.version>7.14.5-ee</camunda.starter.version>-->
-<!--    <spring.version>2.4.11</spring.version>-->
+    <!--    <camunda.version>7.14.5-ee</camunda.version>-->
+    <!--    <camunda.starter.version>7.14.5-ee</camunda.starter.version>-->
+    <!--    <spring.version>2.4.11</spring.version>-->
 
-<!--    <camunda.version>7.14.6-ee</camunda.version>-->
-<!--    <camunda.starter.version>7.14.6-ee</camunda.starter.version>-->
-<!--    <spring.version>2.4.11</spring.version>-->
+    <!--    <camunda.version>7.14.6-ee</camunda.version>-->
+    <!--    <camunda.starter.version>7.14.6-ee</camunda.starter.version>-->
+    <!--    <spring.version>2.4.11</spring.version>-->
 
-<!--    <camunda.version>7.14.8-ee</camunda.version>-->
-<!--    <camunda.starter.version>7.14.8-ee</camunda.starter.version>-->
-<!--    <spring.version>2.4.11</spring.version>-->
+    <!--    <camunda.version>7.14.8-ee</camunda.version>-->
+    <!--    <camunda.starter.version>7.14.8-ee</camunda.starter.version>-->
+    <!--    <spring.version>2.4.11</spring.version>-->
 
-<!--    <camunda.version>7.14.10-ee</camunda.version>-->
-<!--    <camunda.starter.version>7.14.10-ee</camunda.starter.version>-->
-<!--    <spring.version>2.4.11</spring.version>-->
+    <!--    <camunda.version>7.14.10-ee</camunda.version>-->
+    <!--    <camunda.starter.version>7.14.10-ee</camunda.starter.version>-->
+    <!--    <spring.version>2.4.11</spring.version>-->
 
-<!--    <camunda.version>7.14.12-ee</camunda.version>-->
-<!--    <camunda.starter.version>7.14.12-ee</camunda.starter.version>-->
-<!--    <spring.version>2.4.11</spring.version>-->
+    <!--    <camunda.version>7.14.12-ee</camunda.version>-->
+    <!--    <camunda.starter.version>7.14.12-ee</camunda.starter.version>-->
+    <!--    <spring.version>2.4.11</spring.version>-->
 
-<!--    <camunda.version>7.15.0-ee</camunda.version>-->
-<!--    <camunda.starter.version>7.15.0-ee</camunda.starter.version>-->
-<!--    <spring.version>2.4.11</spring.version>-->
+    <!--    <camunda.version>7.15.0-ee</camunda.version>-->
+    <!--    <camunda.starter.version>7.15.0-ee</camunda.starter.version>-->
+    <!--    <spring.version>2.4.11</spring.version>-->
 
-<!--    <camunda.version>7.15.2-ee</camunda.version>-->
-<!--    <camunda.starter.version>7.15.2-ee</camunda.starter.version>-->
-<!--    <spring.version>2.4.11</spring.version>-->
+    <!--    <camunda.version>7.15.2-ee</camunda.version>-->
+    <!--    <camunda.starter.version>7.15.2-ee</camunda.starter.version>-->
+    <!--    <spring.version>2.4.11</spring.version>-->
 
-<!--    <camunda.version>7.15.3-ee</camunda.version>-->
-<!--    <camunda.starter.version>7.15.3-ee</camunda.starter.version>-->
-<!--    <spring.version>2.5.5</spring.version>-->
+    <!--    <camunda.version>7.15.3-ee</camunda.version>-->
+    <!--    <camunda.starter.version>7.15.3-ee</camunda.starter.version>-->
+    <!--    <spring.version>2.5.5</spring.version>-->
 
-<!--    <camunda.version>7.15.6-ee</camunda.version>-->
-<!--    <camunda.starter.version>7.15.6-ee</camunda.starter.version>-->
-<!--    <spring.version>2.5.5</spring.version>-->
+    <!--    <camunda.version>7.15.6-ee</camunda.version>-->
+    <!--    <camunda.starter.version>7.15.6-ee</camunda.starter.version>-->
+    <!--    <spring.version>2.5.15</spring.version>-->
 
-    <camunda.version>7.16.2-ee</camunda.version>
-    <camunda.starter.version>7.16.2-ee</camunda.starter.version>
-    <spring.version>2.5.5</spring.version>
+    <!--    <camunda.version>7.16.2-ee</camunda.version>-->
+    <!--    <camunda.starter.version>7.16.2-ee</camunda.starter.version>-->
+    <!--    <spring.version>2.5.15</spring.version>-->
 
-    <lombok.version>1.18.22</lombok.version>
-    <jaxb.version>2.3.5</jaxb.version>
+    <!--    <camunda.version>7.17.2-ee</camunda.version>-->
+    <!--    <camunda.starter.version>7.17.2-ee</camunda.starter.version>-->
+    <!--    <spring.version>2.6.15</spring.version>-->
+
+    <!--    <camunda.version>7.18.12-ee</camunda.version>-->
+    <!--    <camunda.starter.version>7.18.2-ee</camunda.starter.version>-->
+    <!--    <spring.version>2.7.17</spring.version>-->
+
+    <!--    <camunda.version>7.19.7-ee</camunda.version>-->
+    <!--    <camunda.starter.version>7.19.7-ee</camunda.starter.version>-->
+    <!--    <spring.version>2.7.14</spring.version>-->
+
+    <camunda.version>7.20.1-ee</camunda.version>
+    <camunda.starter.version>7.20.1-ee</camunda.starter.version>
+    <spring.version>3.1.5</spring.version>
+
+    <jaxb.version>3.0.2</jaxb.version>
+    <lombok.version>1.18.30</lombok.version>
     <logback.version>1.2.6</logback.version>
 
     <maven.compiler.source>1.8</maven.compiler.source>
